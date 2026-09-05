@@ -16,6 +16,7 @@ body.sidebar-hidden .image-row {
   left: 12.5%;
   color: #666;
   width: 75%;
+  cursor: pointer;
 }
 
 .hide-button {
@@ -30,7 +31,7 @@ body.sidebar-hidden .image-row {
 .show-button {
     position: fixed;
     left: 0.3vw;
-    top: 93vh;
+    top: 95vh;
     color: #666;
 
     width: 4vw;
