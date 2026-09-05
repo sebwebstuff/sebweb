@@ -30,7 +30,7 @@ body.sidebar-hidden .image-row {
 .show-button {
     position: fixed;
     left: 0.3vw;
-    top: 92vh;
+    top: 95vh;
     color: #666;
 
     width: 4vw;
@@ -44,6 +44,7 @@ body.sidebar-hidden .image-row {
 
     transform: translateX(-150%);
     transition: transform 0.4s ease;
+    z-index: 9;
 
 }
 
@@ -71,6 +72,7 @@ body.sidebar-hidden .show-button {
 	border-radius: 2vw;
 	border: 0.4vw solid #666;
 	transition: transform 0.5s ease;
+  z-index: 9;
 }
 
 .left-rectangle.hidden {
