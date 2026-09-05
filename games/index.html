@@ -2,7 +2,7 @@
 
 <head>
 
-<link rel="stylesheet" href="games-style.css" /> 
+<link rel="stylesheet" href="games-style.css" />
 
 <!-- Quicksand Font -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,11 +36,21 @@
 </div>
 </a>
 
-<a href="../games/">
-<div class="game-button">
-  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" viewBox="0 0 14 14" style="color: rgb(102, 102, 102); opacity: 1; transform: rotate(0deg);"><path fill="currentColor" fill-rule="evenodd" d="M1.203 5.169L.784 8.94a2.305 2.305 0 0 0 4.353 1.286L5.5 9.5h3l.363.726a2.305 2.305 0 0 0 4.353-1.286l-.42-3.771A3 3 0 0 0 9.816 2.5h-5.63a3 3 0 0 0-2.982 2.669m3.172-.794c.345 0 .625.28.625.625v.542h.542a.625.625 0 1 1 0 1.25H5v.541a.625.625 0 1 1-1.25 0v-.541h-.542a.625.625 0 1 1 0-1.25h.542V5c0-.345.28-.625.625-.625m4.89 3.042a.625.625 0 1 0 0-1.25a.625.625 0 0 0 0 1.25m1.876-2.175a.625.625 0 1 1-1.25 0a.625.625 0 0 1 1.25 0" clip-rule="evenodd"></path></svg>
+<div class="game-button" onclick="closeGame()">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" aria-hidden="true">
+    <path fill="currentColor" fill-rule="evenodd" d="M1.203 5.169L.784 8.94a2.305 2.305 0 0 0 4.353 1.286L5.5 9.5h3l.363.726a2.305 2.305 0 0 0 4.353-1.286l-.42-3.771A3 3 0 0 0 9.816 2.5h-5.63a3 3 0 0 0-2.982 2.669m3.172-.794c.345 0 .625.28.625.625v.542h.542a.625.625 0 1 1 0 1.25H5v.541a.625.625 0 1 1-1.25 0v-.541h-.542a.625.625 0 1 1 0-1.25h.542V5c0-.345.28-.625.625-.625m4.89 3.042a.625.625 0 1 0 0-1.25a.625.625 0 0 0 0 1.25m1.876-2.175a.625.625 0 1 1-1.25 0a.625.625 0 0 1 1.25 0" clip-rule="evenodd"></path>
+  </svg>
 </div>
-</a>
+
+<script>
+function closeGame() {
+    const overlays = document.querySelectorAll(".game-overlay");
+
+    overlays.forEach(overlay => {
+        overlay.remove();
+    });
+}
+</script>
 
 <div class="hide-button">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
@@ -67,8 +77,8 @@
 <!-- Eaglercraft 1.8.8 -->
 <a href="../eaglercraft-1.8.8/index.html">
   <div class="image-container">
-    <img class="main-img" src="../images/eaglercraft.png">
-    <img class="hover-img" src="../images/black-fade.png">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/eaglercraft.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
     <div class="image-text">Eaglercraft 1.8.8</div>
   </div>
 </a>
@@ -76,8 +86,8 @@
 
 <!-- Eaglercraft 1.12.2 -->
 <div class="image-container" onclick="launchEaglercraft1122()" style="cursor:pointer;">
-    <img class="main-img" src="../images/eaglercraft.png">
-    <img class="hover-img" src="../images/black-fade.png">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/eaglercraft.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
     <div class="image-text">Eaglercraft 1.12.2</div>
 </div>
 
@@ -86,8 +96,8 @@ function launchEaglercraft1122() {
 
     // Create a full-screen overlay
     var overlay = document.createElement("div");
-
-    overlay.id = "eaglercraft-overlay";
+overlay.id = "eaglercraft-overlay";
+overlay.className = "game-overlay";
 
     overlay.style.position = "fixed";
     overlay.style.top = "0";
@@ -178,8 +188,8 @@ function launchEaglercraft1122() {
 <!-- Slow Roads -->
 <a href="../slow-roads/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/slow-roads.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/slow-roads.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 
 <div class="image-text">Slow Roads</div>
 </div>
@@ -189,8 +199,8 @@ function launchEaglercraft1122() {
 <!-- Block Blast -->
 <a href="https://script.google.com/macros/s/AKfycbzH9oRjTdobTSPaKSyx3p50kVff9NraFRGypSh1a4UcsyiQlC3Ua1ml2MQ1IDXAYD8t/exec">
 <div class="image-container">
-<img class="main-img" src="../images/block-blast.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/block-blast.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Block Blast</div>
 </div>
 </a>
@@ -199,8 +209,8 @@ function launchEaglercraft1122() {
 <!-- Tag -->
 <a href="https://script.google.com/macros/s/AKfycbx2i_PUwUy9l-TtJeWn7gRWPoNf_xh13ZTBzL1IBV3QkpN34k0GQnjMqJTzSQVVkyd5/exec">
 <div class="image-container">
-<img class="main-img" src="../images/tag.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/tag.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Tag</div>
 </div>
 </a>
@@ -209,8 +219,8 @@ function launchEaglercraft1122() {
 <!-- Space Waves -->
 <a href="../space-waves/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/space-waves.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/space-waves.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Space Waves</div>
 </div>
 </a>
@@ -227,8 +237,8 @@ function launchEaglercraft1122() {
 <!-- Super Mario 64 -->
 <a href="../super-mario-64/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/super-mario-64.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/super-mario-64.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Super Mario 64</div>
 </div>
 </a>
@@ -237,8 +247,8 @@ function launchEaglercraft1122() {
 <!-- Time Shooter 2 -->
 <a href="../time-shooter-2/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/time-shooter-2.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/time-shooter-2.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 
 <div class="image-text">Time Shooter 2</div>
 </div>
@@ -248,8 +258,8 @@ function launchEaglercraft1122() {
 <!-- Time Shooter 3 -->
 <a href="../time-shooter-3/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/time-shooter-3.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/time-shooter-3.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Time Shooter 3</div>
 </div>
 </a>
@@ -258,8 +268,8 @@ function launchEaglercraft1122() {
 <!-- Hollow Knight -->
 <a href="../hollow-knight/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/hollow-knight.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/hollow-knight.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Hollow Knight</div>
 </div>
 </a>
@@ -268,8 +278,8 @@ function launchEaglercraft1122() {
 <!-- House Of Hazards -->
 <a href="../house-of-hazards/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/house-of-hazards.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/house-of-hazards.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">House Of Hazards</div>
 </div>
 </a>
@@ -278,8 +288,8 @@ function launchEaglercraft1122() {
 <!-- Sort The Court -->
 <a href="../sort-the-court/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/sort-the-court.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/sort-the-court.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Sort The Court</div>
 </div>
 </a>
@@ -296,8 +306,8 @@ function launchEaglercraft1122() {
 <!-- Drive Mad -->
 <a href="https://script.google.com/macros/s/AKfycbxVs-x_om5QsFCG3y5RmRrQj9NwjmcAeoU3zr3GaTI4Ko64lMcyi2F-U3n8SJQvV9An/exec">
   <div class="image-container">
-    <img class="main-img" src="../images/drive-mad.png">
-    <img class="hover-img" src="../images/black-fade.png">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/drive-mad.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
     <div class="image-text">Drive Mad</div>
   </div>
 </a>
@@ -307,8 +317,8 @@ function launchEaglercraft1122() {
 <!-- Gobble -->
 <a href="https://script.google.com/macros/s/AKfycbwNbHeXls2Lcz92IIwlb_6m4zNKfYIV6-di90GwJg5MwjOb9Jx9mB3WLjcm5pacH5WTzA/exec">
 <div class="image-container">
-    <img class="main-img" src="../images/gobble.png">
-    <img class="hover-img" src="../images/black-fade.png">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/gobble.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
     <div class="image-text">Gobble</div>
 </div>
 </a>
@@ -317,8 +327,8 @@ function launchEaglercraft1122() {
 <!-- Recoil -->
 <a href="https://script.google.com/macros/s/AKfycbwSXaWfZj0nYbbTfmLjKpG6JYa1gFE1Sp_Z_WRdLDiFAWFwGdp0Wma7x3p89PvimZpmzA/exec">
 <div class="image-container">
-<img class="main-img" src="../images/recoil.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/recoil.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Recoil</div>
 </div>
 </a>
@@ -327,8 +337,8 @@ function launchEaglercraft1122() {
 <!-- Roper -->
 <a href="../roper/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/roper.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/roper.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Roper</div>
 </div>
 </a>
@@ -337,8 +347,8 @@ function launchEaglercraft1122() {
 <!-- Level Devil -->
 <a href="https://script.google.com/macros/s/AKfycbxuv0QHDrzSIABQa0ashiZFmtHTMPwHV2rAgq5qYBPnbBcGgvUE9PaYLqj81dLFVFda/exec">
 <div class="image-container">
-<img class="main-img" src="../images/level-devil.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/level-devil.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Level Devil</div>
 </div>
 </a>
@@ -347,8 +357,8 @@ function launchEaglercraft1122() {
 <!-- Ragdoll Archers -->
 <a href="https://script.google.com/macros/s/AKfycbzOwpQddsQiGus7GVY51XiCd0FRIJ6XuWCKewW8j4oL7DEqEAuOBViMucCrjHV3XTtv/exec">
 <div class="image-container">
-<img class="main-img" src="../images/ragdoll-archers.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/ragdoll-archers.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Ragdoll Archers</div>
 </div>
 </a>
@@ -367,8 +377,8 @@ function launchEaglercraft1122() {
 <!-- Big Tower Tiny Square -->
 <a href="https://script.google.com/macros/s/AKfycbyZwYVi25wTZPh3xidakHZSMhp3v76fnzv8MEAnEVxZQJu2eO9J_R4ziEMgwuDyr9uD/exec">
 <div class="image-container">
-<img class="main-img" src="../images/big-tower-tiny-square.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/big-tower-tiny-square.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Big Tower Tiny Square</div>
 </div>
 </a>
@@ -377,8 +387,8 @@ function launchEaglercraft1122() {
 <!-- Big Tower Tiny Square 2 -->
 <a href="https://script.google.com/macros/s/AKfycbzgeWKCh9J5637eEedWIJrSIYXghzCZ6FtE8Z2JD1rmqDe4twTmCY7qixgoWLLc1qfJrg/exec">
 <div class="image-container">
-<img class="main-img" src="../images/big-tower-tiny-square-2.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/big-tower-tiny-square-2.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 
 <div class="image-text">Big Tower Tiny Square 2</div>
 </div>
@@ -388,8 +398,8 @@ function launchEaglercraft1122() {
 <!-- Big ICE Tower Tiny Square -->
 <a href="https://script.google.com/macros/s/AKfycbzvumnAEGBAkooc-LjKTnbpnHPHHbdOnVo3H6gGXM5DFBaqmItLicPm2MwbLE28szvW/exec">
 <div class="image-container">
-<img class="main-img" src="../images/big-ice-tower-tiny-square.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/big-ice-tower-tiny-square.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Big ICE Tower Tiny Square</div>
 </div>
 </a>
@@ -398,8 +408,8 @@ function launchEaglercraft1122() {
 <!-- Big NEON Tower Tiny Square -->
 <a href="https://script.google.com/macros/s/AKfycbxhDpmeThW-RkNZvjSwajXa7INd2vTXIuQnGeEgCeD1OHgiXjSdtSSdU3GzzOgTUHts5Q/exec">
 <div class="image-container">
-<img class="main-img" src="../images/big-neon-tower-tiny-square.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/big-neon-tower-tiny-square.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Big NEON Tower Tiny Square</div>
 </div>
 </a>
@@ -409,8 +419,8 @@ function launchEaglercraft1122() {
 <!-- Big FLAPPY Tower Tiny Square -->
 <a href="../big-flappy-tower-tiny-square/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/big-flappy-tower-tiny-square.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/big-flappy-tower-tiny-square.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Big FLAPPY Tower Tiny Square</div>
 </div>
 </a>
@@ -419,8 +429,8 @@ function launchEaglercraft1122() {
 <!-- Gladihoppers -->
 <a href="../gladihoppers/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/gladihoppers.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/gladihoppers.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Gladihoppers</div>
 </div>
 </a>
@@ -438,8 +448,8 @@ function launchEaglercraft1122() {
 <!-- OvO -->
 <a href="https://script.google.com/macros/s/AKfycbzUQuuXMOFwEnVX0kO33dnVB2S0KW5FOaPJSUse2mPjtiwawM1FxIg25GoHL6j1ld_6yQ/exec">
   <div class="image-container">
-    <img class="main-img" src="../images/ovo.png">
-    <img class="hover-img" src="../images/black-fade.png">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/ovo.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
     <div class="image-text">OvO</div>
   </div>
 </a>
@@ -449,8 +459,8 @@ function launchEaglercraft1122() {
 <!-- OvO 2 -->
 <a href="https://script.google.com/macros/s/AKfycbxRc2mLPfewq54kfBPEggJJtSs0EqakNAHgo654liN-c0H9ZU2EBAOiNn2shhVeCAfP/exec">
 <div class="image-container">
-    <img class="main-img" src="../images/ovo-2.png">
-    <img class="hover-img" src="../images/black-fade.png">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/ovo-2.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
     <div class="image-text">OvO 2</div>
 </div>
 </a>
@@ -459,8 +469,8 @@ function launchEaglercraft1122() {
 <!-- OvO Dimensions -->
 <a href="https://script.google.com/macros/s/AKfycbwpeXp8B_TmSHMWHuZacMQ197iRPcZuSh66JAahox42_Mm32vyrXy0BTwIuNZROXSr9/exec">
 <div class="image-container">
-<img class="main-img" src="../images/ovo-dimensions.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/ovo-dimensions.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">OvO Dimensions</div>
 </div>
 </a>
@@ -469,8 +479,8 @@ function launchEaglercraft1122() {
 <!-- Hover Racer Drive -->
 <a href="https://script.google.com/macros/s/AKfycbwUg6F3a9Aan7DghSJ4fz1xS4Q4uMT9HDhEmF7AcfDM3rBQT1bC_IdraKe1tBAfbWQLaA/exec">
 <div class="image-container">
-<img class="main-img" src="../images/hover-racer-drive.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/hover-racer-drive.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Hover Racer Drive</div>
 </div>
 </a>
@@ -479,8 +489,8 @@ function launchEaglercraft1122() {
 <!-- Baldi's Basics -->
 <a href="../baldis-basics/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/baldis-basics.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/baldis-basics.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Baldi's Basics</div>
 </div>
 </a>
@@ -489,8 +499,8 @@ function launchEaglercraft1122() {
 <!-- Amanda The Adventurer -->
 <a href="../amanda-the-adventurer/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/amanda-the-adventurer.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/amanda-the-adventurer.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Amanda The Adventurer</div>
 </div>
 </a>
@@ -508,8 +518,8 @@ function launchEaglercraft1122() {
 <!-- Ducklings.io -->
 <a href="../ducklings.io/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/ducklings-io.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/ducklings-io.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Ducklings.io</div>
 </div>
 </a>
@@ -518,8 +528,8 @@ function launchEaglercraft1122() {
 <!-- Superhot -->
 <a href="../superhot/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/superhot.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/superhot.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Superhot</div>
 </div>
 </a>
@@ -528,8 +538,8 @@ function launchEaglercraft1122() {
 <!-- Gunspin -->
 <a href="https://script.google.com/macros/s/AKfycbysqNeV2qcGYx8JkSOKy1AchYhtfdu9163TBVFYazaJEW0x0-KKTYStBc1CPfBBKNMm/exec">
 <div class="image-container">
-<img class="main-img" src="../images/gunspin.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/gunspin.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Gunspin</div>
 </div>
 </a>
@@ -538,8 +548,8 @@ function launchEaglercraft1122() {
 <!-- Buckshot Roulette -->
 <a href="../buckshot-roulette/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/buckshot-roulette.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/buckshot-roulette.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Buckshot Roulette</div>
 </div>
 </a>
@@ -549,8 +559,8 @@ function launchEaglercraft1122() {
 <!-- Bendy And The Ink Machine -->
 <a href="../bendy-and-the-ink-machine/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/bendy-and-the-ink-machine.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/bendy-and-the-ink-machine.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Bendy And The Ink Machine</div>
 </div>
 </a>
@@ -559,8 +569,8 @@ function launchEaglercraft1122() {
 <!-- Bendy And The Ink Machine -->
 <a href="https://script.google.com/macros/s/AKfycbzYjjkzAlGAyg3cnFAsAaK6oud9pIx9S-ASfjU_zjGoFA94pnJAWVMGmwj7Dup8herf/exec">
 <div class="image-container">
-<img class="main-img" src="../images/crossy-road.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/crossy-road.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Crossy Road</div>
 </div>
 </a>
@@ -578,8 +588,8 @@ function launchEaglercraft1122() {
 <!-- Poly Track -->
 <a href="../polytrack/index.html">
   <div class="image-container">
-    <img class="main-img" src="../images/polytrack.png">
-    <img class="hover-img" src="../images/black-fade.png">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/polytrack.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
     <div class="image-text">Poly Track</div>
   </div>
 </a>
@@ -589,8 +599,8 @@ function launchEaglercraft1122() {
 <!-- Unitled Goose Game -->
 <a href="../untitled-goose-game/index.html">
 <div class="image-container">
-    <img class="main-img" src="../images/untitled-goose-game.png">
-    <img class="hover-img" src="../images/black-fade.png">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/untitled-goose-game.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
     <div class="image-text">Untitled Goose Game</div>
 </div>
 </a>
@@ -599,8 +609,8 @@ function launchEaglercraft1122() {
 <!-- Terraria -->
 <a href="../terraria/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/terraria.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/terraria.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Terraria</div>
 </div>
 </a>
@@ -609,8 +619,8 @@ function launchEaglercraft1122() {
 <!-- Stickman Hook -->
 <a href="../stickman-hook/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/stickman-hook.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/stickman-hook.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Stickman Hook</div>
 </div>
 </a>
@@ -619,8 +629,8 @@ function launchEaglercraft1122() {
 <!-- Tiny Fishing -->
 <a href="../tiny-fishing/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/tiny-fishing.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/tiny-fishing.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Tiny Fishing</div>
 </div>
 </a>
@@ -629,8 +639,8 @@ function launchEaglercraft1122() {
 <!-- Tomb Of The Mask -->
 <a href="../tomb-of-the-mask/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/tomb-of-the-mask.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/tomb-of-the-mask.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Tomb Of The Mask</div>
 </div>
 </a>
@@ -649,8 +659,8 @@ function launchEaglercraft1122() {
 <!-- Basket Random -->
 <a href="https://script.google.com/macros/s/AKfycbwIvR4B4fxclRkRitwyjM9U1sXPjo7WKQNLa0I2JnAYVD5YD9uFaXS_XjJmPZ-lz5IjIw/exec">
 <div class="image-container">
-<img class="main-img" src="../images/basket-random.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/basket-random.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Basket Random</div>
 </div>
 </a>
@@ -659,8 +669,8 @@ function launchEaglercraft1122() {
 <!-- Soccer Random -->
 <a href="../soccer-random/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/soccer-random.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/soccer-random.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Soccer Random</div>
 </div>
 </a>
@@ -669,8 +679,8 @@ function launchEaglercraft1122() {
 <!-- Volley Random -->
 <a href="../volley-random/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/volley-random.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/volley-random.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Volley Random</div>
 </div>
 </a>
@@ -679,8 +689,8 @@ function launchEaglercraft1122() {
 <!-- Boxing Random -->
 <a href="../boxing-random/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/boxing-random.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/boxing-random.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Boxing Random</div>
 </div>
 </a>
@@ -689,8 +699,8 @@ function launchEaglercraft1122() {
 <!-- Rooftop Snipers -->
 <a href="../rooftop-snipers/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/rooftop-snipers.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/rooftop-snipers.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Rooftop Snipers</div>
 </div>
 </a>
@@ -699,8 +709,8 @@ function launchEaglercraft1122() {
 <!-- Janissary Battles -->
 <a href="../janissary-battles/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/janissary-battles.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/janissary-battles.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Janissary Battles</div>
 </div>
 </a>
@@ -719,8 +729,8 @@ function launchEaglercraft1122() {
 <!-- Brotato -->
 <a href="../brotato/index.html">
   <div class="image-container">
-    <img class="main-img" src="../images/brotato.png">
-    <img class="hover-img" src="../images/black-fade.png">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/brotato.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
     <div class="image-text">Brotato</div>
   </div>
 </a>
@@ -730,8 +740,8 @@ function launchEaglercraft1122() {
 <!-- CloverPit -->
 <a href="../cloverpit/index.html">
 <div class="image-container">
-    <img class="main-img" src="../images/cloverpit.png">
-    <img class="hover-img" src="../images/black-fade.png">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/cloverpit.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
     <div class="image-text">CloverPit</div>
 </div>
 </a>
@@ -740,8 +750,8 @@ function launchEaglercraft1122() {
 <!-- Balatro -->
 <a href="../balatro/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/balatro.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/balatro.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Balatro</div>
 </div>
 </a>
@@ -750,8 +760,8 @@ function launchEaglercraft1122() {
 <!-- Adventure Capitalist -->
 <a href="../adventure-capitalist/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/adventure-capitalist.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/adventure-capitalist.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Adventure Capitalist</div>
 </div>
 </a>
@@ -760,8 +770,8 @@ function launchEaglercraft1122() {
 <!-- Breadskate Forever -->
 <a href="../breadskate-forever/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/breadskate-forever.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/breadskate-forever.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Breadskate Forever</div>
 </div>
 </a>
@@ -770,8 +780,8 @@ function launchEaglercraft1122() {
 <!-- Smash Karts -->
 <a href="../smash-karts/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/smash-karts.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/smash-karts.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Smash Karts</div>
 </div>
 </a>
@@ -791,8 +801,8 @@ function launchEaglercraft1122() {
 <!-- Snow Rider 3D -->
 <a href="../snow-rider-3d/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/snow-rider-3d.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/snow-rider-3d.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Snow Rider 3D</div>
 </div>
 </a>
@@ -801,8 +811,8 @@ function launchEaglercraft1122() {
 <!-- Pikwip -->
 <a href="../pikwip/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/pikwip.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/pikwip.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Pikwip</div>
 </div>
 </a>
@@ -811,8 +821,8 @@ function launchEaglercraft1122() {
 <!-- Gun Knight -->
 <a href="../gun-knight/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/gun-knight.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/gun-knight.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Gun Knight</div>
 </div>
 </a>
@@ -821,8 +831,8 @@ function launchEaglercraft1122() {
 <!-- Kour.io -->
 <a href="../kour.io/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/kour-io.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/kour-io.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Kour.io</div>
 </div>
 </a>
@@ -831,8 +841,8 @@ function launchEaglercraft1122() {
 <!-- Swingo -->
 <a href="../swingo/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/swingo.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/swingo.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Swingo</div>
 </div>
 </a>
@@ -841,8 +851,8 @@ function launchEaglercraft1122() {
 <!-- Blumgi Slime -->
 <a href="../blumgi-slime/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/blumgi-slime.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/blumgi-slime.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Blumgi</div>
 </div>
 </a>
@@ -863,8 +873,8 @@ function launchEaglercraft1122() {
 <!-- Escape Road -->
 <a href="../escape-road/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/escape-road.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/escape-road.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Escape Road</div>
 </div>
 </a>
@@ -873,8 +883,8 @@ function launchEaglercraft1122() {
 <!-- Escape Road 2 -->
 <a href="../escape-road-2/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/escape-road-2.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/escape-road-2.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Escape Road 2</div>
 </div>
 </a>
@@ -883,8 +893,8 @@ function launchEaglercraft1122() {
 <!-- Dire Decks -->
 <a href="../dire-decks/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/dire-decks.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/dire-decks.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Dire Decks</div>
 </div>
 </a>
@@ -893,8 +903,8 @@ function launchEaglercraft1122() {
 <!-- HELP! NO BRAKES -->
 <a href="../help-no-brake/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/help-no-brake.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/help-no-brake.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">HELP! NO BRAKE</div>
 </div>
 </a>
@@ -903,8 +913,8 @@ function launchEaglercraft1122() {
 <!-- Disc Us -->
 <a href="../disc-us/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/disc-us.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/disc-us.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Disc Us</div>
 </div>
 </a>
@@ -913,8 +923,8 @@ function launchEaglercraft1122() {
 <!-- Scritchy Scratchy -->
 <a href="../scritchy-scratchy/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/scritchy-scratchy.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/scritchy-scratchy.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Scritchy Scractchy</div>
 </div>
 </a>
@@ -933,8 +943,8 @@ function launchEaglercraft1122() {
 <!-- Terraforma -->
 <a href="../terraforma/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/terraforma.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/terraforma.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Terraforma</div>
 </div>
 </a>
@@ -943,8 +953,8 @@ function launchEaglercraft1122() {
 <!-- Birb -->
 <a href="../birb-page/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/birb.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/birb.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Birb</div>
 </div>
 </a>
@@ -953,8 +963,8 @@ function launchEaglercraft1122() {
 <!-- Paper.io 2 -->
 <a href="https://script.google.com/macros/s/AKfycbwuq4eI9d5aEsioa4C6UzFuD3uehnmuuCQZ4YS3VSoOquBdZ7IhKOlz0CQzIeUgqAdK/exec">
 <div class="image-container">
-<img class="main-img" src="../images/paper-io-2.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/paper-io-2.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Paper.io 2</div>
 </div>
 </a>
@@ -963,8 +973,8 @@ function launchEaglercraft1122() {
 <!-- Duck Life 6 -->
 <a href="../duck-life-6/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/duck-life-6.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/duck-life-6.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Duck Life 6</div>
 </div>
 </a>
@@ -973,8 +983,8 @@ function launchEaglercraft1122() {
 <!-- Duck Life 7 -->
 <a href="../duck-life-7/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/duck-life-7.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/duck-life-7.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Duck Life 7</div>
 </div>
 </a>
@@ -983,8 +993,8 @@ function launchEaglercraft1122() {
 <!-- Duck Life 8 -->
 <a href="../duck-life-8/index.html">
 <div class="image-container">
-<img class="main-img" src="../images/duck-life-8.png">
-    <img class="hover-img" src="../images/black-fade.png">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/duck-life-8.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebweb@main/images/black-fade.png">
 <div class="image-text">Duck Life 8</div>
 </div>
 </a>
