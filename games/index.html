@@ -90,7 +90,6 @@ function launchEaglercraft1122() {
     document.write(`
 <!DOCTYPE html>
 <html style="width:100%;height:100%;background-color:black;">
-
 <head>
     <meta charset="UTF-8">
 
@@ -171,6 +170,7 @@ function launchEaglercraft1122() {
 </head>
 
 <body
+    id="game_frame"
     style="
         margin:0;
         width:100%;
@@ -178,101 +178,7 @@ function launchEaglercraft1122() {
         overflow:hidden;
         background-color:black;
     ">
-
-    <!-- Eaglercraft game -->
-    <div id="game_frame"></div>
-
-
-    <!-- MENU OVERLAY -->
-
-    <div class="show-button">
-        <svg xmlns="http://www.w3.org/2000/svg"
-             viewBox="0 0 20 20"
-             fill="currentColor"
-             stroke="currentColor"
-             stroke-width="1">
-
-            <path fill-rule="evenodd"
-                d="M2 4.75A.75.75 0 0 1 2.75 4h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 4.75ZM2 10a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1 0-1.5H2.75a.75.75 0 0 1-.75-.75Z"
-                clip-rule="evenodd" />
-        </svg>
-    </div>
-
-
-    <div class="left-rectangle">
-
-        <!-- HOME BUTTON -->
-        <a href="../">
-            <div class="home-button">
-                <svg xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 20 20"
-                     fill="currentColor">
-
-                    <path fill-rule="evenodd"
-                        d="M9.293 2.293a1 1 0 0 1 1.414 0l7 7A1 1 0 0 1 17 11h-1v6a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-6H3a1 1 0 0 1-.707-1.707l7-7Z"
-                        clip-rule="evenodd" />
-                </svg>
-            </div>
-        </a>
-
-
-        <!-- GAMES BUTTON -->
-        <a href="../games/">
-            <div class="game-button">
-                <svg xmlns="http://www.w3.org/2000/svg"
-                     viewBox="0 0 24 24"
-                     fill="currentColor">
-
-                    <path
-                        d="M6.5 7.5h11A4.5 4.5 0 0 1 22 12v2.5a4 4 0 0 1-7.31 2.22l-.8-1.22H10.11l-.8 1.22A4 4 0 0 1 2 14.5V12a4.5 4.5 0 0 1 4.5-4.5Zm2.5 2H7.5v1.5H6v2h1.5v1.5h1.5V13H10v-2H9V9.5Zm6 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2Zm3 2a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" />
-                </svg>
-            </div>
-        </a>
-
-
-        <!-- HIDE BUTTON -->
-        <div class="hide-button">
-            <svg xmlns="http://www.w3.org/2000/svg"
-                 viewBox="0 0 20 20"
-                 fill="currentColor"
-                 stroke="currentColor"
-                 stroke-width="1">
-
-                <path fill-rule="evenodd"
-                    d="M2 4.75A.75.75 0 0 1 2.75 4h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 4.75ZM2 10a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1 0-1.5H2.75a.75.75 0 0 1-.75-.75Z"
-                    clip-rule="evenodd" />
-            </svg>
-        </div>
-
-    </div>
-
-
-    <!-- MENU JAVASCRIPT -->
-
-    <script>
-
-        const showButton = document.querySelector(".show-button");
-        const leftRectangle = document.querySelector(".left-rectangle");
-        const hideButton = document.querySelector(".hide-button");
-
-
-        showButton.addEventListener("click", function() {
-
-            leftRectangle.style.display = "flex";
-            showButton.style.display = "none";
-
-        });
-
-
-        hideButton.addEventListener("click", function() {
-
-            leftRectangle.style.display = "none";
-            showButton.style.display = "flex";
-
-        });
-
-    <\/script>
-
+    
 </body>
 
 </html>
