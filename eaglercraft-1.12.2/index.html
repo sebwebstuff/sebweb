@@ -1,25 +1,4 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Launch Game</title>
-</head>
-<body>
-
-<button onclick="openGame()">Open Eaglercraft</button>
-
-<script>
-function openGame() {
-    // Open a new about:blank tab
-    const gameWindow = window.open("about:blank", "_blank");
-
-    if (!gameWindow) {
-        alert("The browser blocked the new tab. Please allow popups for this site.");
-        return;
-    }
-
-    // The HTML that will be placed inside about:blank
-    const gameHTML = `
-<!DOCTYPE html>
 <html style="width:100%;height:100%;background-color:black;">
 <head>
     <meta charset="UTF-8" />
@@ -132,16 +111,5 @@ function openGame() {
         background-color:black;
     "
     id="game_frame">
-</body>
-</html>
-`;
-
-    // Write the HTML into the new tab
-    gameWindow.document.open();
-    gameWindow.document.write(gameHTML);
-    gameWindow.document.close();
-}
-</script>
-
 </body>
 </html>
