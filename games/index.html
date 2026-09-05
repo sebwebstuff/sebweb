@@ -84,107 +84,93 @@
 <script>
 function launchEaglercraft1122() {
 
-    // Replace the current page with Eaglercraft
-    document.open();
+    // Create a full-screen overlay
+    var overlay = document.createElement("div");
 
-    document.write(`
-<!DOCTYPE html>
-<html style="width:100%;height:100%;background-color:black;">
-<head>
-    <meta charset="UTF-8">
+    overlay.id = "eaglercraft-overlay";
 
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0,
-        minimum-scale=1.0, maximum-scale=1.0">
+    overlay.style.position = "fixed";
+    overlay.style.top = "0";
+    overlay.style.left = "0";
+    overlay.style.width = "100vw";
+    overlay.style.height = "100vh";
+    overlay.style.zIndex = "8";
+    overlay.style.backgroundColor = "black";
 
-    <title>Eaglercraft 1.12.2</title>
+    // Create the Eaglercraft game container
+    var gameFrame = document.createElement("div");
 
-    <link
-        type="image/png"
-        rel="shortcut icon"
-        href="https://cdn.jsdelivr.net/gh/sebwebstuff/eaglercraft-1.12.2@main/favicon.png">
+    gameFrame.id = "game_frame";
 
-    <script
-        type="text/javascript"
-        src="https://cdn.jsdelivr.net/gh/sebwebstuff/eaglercraft-1.12.2@main/bootstrap.js">
-    <\/script>
+    gameFrame.style.width = "100%";
+    gameFrame.style.height = "100%";
 
-    <script>
-        "use strict";
+    overlay.appendChild(gameFrame);
+    document.body.appendChild(overlay);
 
-        window.addEventListener("load", function() {
 
-            var relayId = Math.floor(Math.random() * 3);
+    // Load Eaglercraft bootstrap.js
+    var script = document.createElement("script");
 
-            window.eaglercraftXOpts = {
-                demoMode: false,
+    script.src =
+        "https://cdn.jsdelivr.net/gh/sebwebstuff/eaglercraft-1.12.2@main/bootstrap.js";
 
-                container: "game_frame",
+    script.onload = function() {
 
-                assetsURI:
-                    "https://cdn.jsdelivr.net/gh/sebwebstuff/eaglercraft-1.12.2@main/assets.epw",
+        var relayId = Math.floor(Math.random() * 3);
 
-                worldsDB: "worlds",
+        window.eaglercraftXOpts = {
 
-                servers: [],
+            demoMode: false,
 
-                relays: [
-                    {
-                        addr: "wss://relay.deev.is/",
-                        comment: "lax1dude relay #1",
-                        primary: relayId == 0
-                    },
-                    {
-                        addr: "wss://relay.lax1dude.net/",
-                        comment: "lax1dude relay #2",
-                        primary: relayId == 1
-                    },
-                    {
-                        addr: "wss://relay.shhnowisnottheti.me/",
-                        comment: "ayunami relay #1",
-                        primary: relayId == 2
-                    }
-                ]
-            };
+            container: "game_frame",
 
-            var q = window.location.search;
+            assetsURI:
+                "https://cdn.jsdelivr.net/gh/sebwebstuff/eaglercraft-1.12.2@main/assets.epw",
 
-            if (
-                typeof q === "string" &&
-                q[0] === "?" &&
-                typeof window.URLSearchParams !== "undefined"
-            ) {
-                q = new window.URLSearchParams(q);
+            worldsDB: "worlds",
 
-                var s = q.get("server");
+            servers: [],
 
-                if (s) {
-                    window.eaglercraftXOpts.joinServer = s;
+            relays: [
+                {
+                    addr: "wss://relay.deev.is/",
+                    comment: "lax1dude relay #1",
+                    primary: relayId == 0
+                },
+                {
+                    addr: "wss://relay.lax1dude.net/",
+                    comment: "lax1dude relay #2",
+                    primary: relayId == 1
+                },
+                {
+                    addr: "wss://relay.shhnowisnottheti.me/",
+                    comment: "ayunami relay #1",
+                    primary: relayId == 2
                 }
+            ]
+        };
+
+        var q = window.location.search;
+
+        if (
+            typeof q === "string" &&
+            q[0] === "?" &&
+            typeof window.URLSearchParams !== "undefined"
+        ) {
+            q = new window.URLSearchParams(q);
+
+            var s = q.get("server");
+
+            if (s) {
+                window.eaglercraftXOpts.joinServer = s;
             }
+        }
 
-            main();
-        });
-    <\/script>
+        main();
+    };
 
-</head>
-
-<body
-    id="game_frame"
-    style="
-        margin:0;
-        width:100%;
-        height:100%;
-        overflow:hidden;
-        background-color:black;
-    ">
-    
-</body>
-
-</html>
-    `);
-
-    document.close();
+    document.head.appendChild(script);
 }
 </script>
 
