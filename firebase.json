@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "sebwebgames3",
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

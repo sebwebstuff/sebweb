@@ -9,9 +9,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-
-<!-- website .ico -->
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
  
 </head>
 
@@ -19,11 +16,12 @@
 
 
 
+<!-- about:blank script (same tab version) -->
 <script>
 function openGame(url) {
-    var win = window.open('about:blank', '_blank');
 
-    win.document.write(`
+    document.open();
+    document.write(`
         <html>
         <head>
             <title>about:blank</title>
@@ -44,6 +42,7 @@ function openGame(url) {
         </body>
         </html>
     `);
+    document.close();
 }
 </script>
 
@@ -56,19 +55,9 @@ function openGame(url) {
 
 <div style="height: 5.25vw;"></div>
 
-<!-- Games Button -->
 <center>
-<a href="/games/">
+<a href="#" onclick="openGame('aboutblank-games.html')">
 	<button>Games</button>
-</a>
-</center>
-
-<div style="height: 2.625vw;"></div>
-
-<!-- About Blank Button -->
-<center>
-<a href"#" onclick="openGame('aboutblank-home.html')">
-	<button>Open in about:blank</button>
 </a>
 </center>
 
