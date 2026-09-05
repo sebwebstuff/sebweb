@@ -10,6 +10,14 @@ body.sidebar-hidden .image-row {
   width: 75%;
 }
 
+.game-button {
+  position: absolute;
+  top: 10%;
+  left: 12.5%;
+  color: #666;
+  width: 75%;
+}
+
 .hide-button {
   position: absolute;
   top: 90%;
